@@ -1,0 +1,185 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    
+}
+ 
+body {
+
+    font-size: 13px;
+    background-color: hsl(210, 46%, 95%);
+    margin: 2em 2em;
+   
+}
+
+h2 {
+    margin: 1em auto;
+    font-weight: 600;
+}
+
+h4 {
+    color: hsl(210, 46%, 95%);
+
+}
+
+h4:last-of-type {
+    opacity: 50%;
+}
+
+p {
+    color: hsl(210, 46%, 95%);
+    opacity: 70%;
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+img {
+    border-radius: 50%;
+    width: 32px;
+}
+
+.profile {
+    display: inline-block;
+    margin-left: 1.5em;
+}
+
+.profile-wrap {
+    display: flex;
+    align-items: center;
+}
+.daniel {
+    background-color: hsl(263, 55%, 52%);
+    background-image: url("/images/bg-pattern-quotation.svg");
+    background-repeat: no-repeat;
+    background-position-y: top;
+    background-position-x: 50vw;
+    background-size: 35%;
+    grid-area: one;
+}
+
+.jonathan {
+    background-color: hsl(217, 19%, 35%);
+    grid-area: two;
+}
+
+.jeanette {
+    background-color: hsl(0, 0%, 100%);
+    grid-area: three;
+}
+
+.patrick {
+    background-color: hsl(219, 29%, 14%);
+    grid-area: four;
+}
+
+.kira {
+    background-color: hsl(0, 0%, 100%);
+    grid-area: five;
+}
+
+.daniel,
+.jonathan,
+.patrick {
+    color: hsl(0, 0%, 100%);
+}
+
+.jeanette>h2,
+.kira>h2 {
+    color: hsl(217, 19%, 35%);
+}
+
+.jeanette>p,
+.kira>p {
+    color: hsl(217, 19%, 35%);
+    opacity: 70%;
+}
+
+.jeanette>.profile-wrap>.profile>h4,
+.kira>.profile-wrap>.profile>h4 {
+    color: hsl(217, 19%, 35%);
+
+}
+
+.jeanette>.profile>h4:last-of-type,
+.kira>.profile>h4:last-of-type {
+    opacity: 50%;
+}
+
+.jeanette, .kira {
+    box-shadow: 1em 2em 2em rgb(226, 226, 226);
+}
+
+.daniel, .jonathan , .jeanette, .patrick , .kira {
+    padding: 2em 2.5em;
+    border-radius: 5px;
+  
+}
+
+.attribution {
+    margin: 4rem auto 2rem;
+    padding: 4em 4em;
+    background-color: #272848;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+}
+.attribution>a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+}
+
+@media (max-width: 600px) {
+    body {
+        margin: 2rem 3rem; 
+    }
+    .container {
+        display: grid;
+        gap: 1.5rem;
+        grid-template-areas: 
+        "one"
+        "two"
+        "three"
+        "four"
+        "five"
+        ;
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+@media (min-width:600px){
+    body {
+        margin: 2rem 4rem; 
+    }
+    .container {
+        display: grid;
+        gap: 1.5rem;
+        grid-template-areas: 
+        "one one"
+        "two three"
+        "four four"
+        "five five"
+        ;
+        grid-template-columns: 1fr 1fr;
+
+    }
+    
+}
+
+@media screen and (min-width: 1050px) {
+    body {
+        margin: 5rem 7rem; 
+    }
+    .container {
+        box-sizing: border-box;
+        display: grid;
+        grid-template-areas: 
+        "one one two five"
+        "three four four five" ;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+    }
+}
